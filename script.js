@@ -90,29 +90,76 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  //Declare variables to store user input and user confirmations
+  var lenght = parseInt(prompt('How many characters woudl you like your password to contain?')
+  );
+  while (isNaN(lenght) || lenght < 10 || lenght > 64) {
+    alert('Password lenght must be a number between 10 and 64');
+    lenght = parseInt(prompt('How many characters would you like your password to contain?')
+    );
+  }
+
+  var hasSpecialCharacters = confirm('Click OK to confirm including special characters.');
+
+  var hasNumericCharacters = confirm('Click OK to confirm including numeric characters.');
+
+  var hasLowerCasedCharacters = confirm('Click OK to confirm including special characters.');
+
+  var hasUpperCasedCharacters = confirm('Click OK to confirm including uppercase characters.');
+
+  // If no character types are selected, prompt user to try again
+
+  while (
+    !hasSpecialCharacters &&
+    !hasNumericCharacters &&
+    !hasLowerCasedCharacters &&
+    !hasUpperCasedCharacters
+  ) {
+
+    alert('Must select at least one character type');
+    var hasSpecialCharacters = confirm('Click OK to confirm including special characters.');
+
+    var hasNumericCharacters = confirm('Click OK to confirm including numeric characters.');
+
+    var hasLowerCasedCharacters = confirm('Click OK to confirm including special characters.');
+
+    var hasUpperCasedCharacters = confirm('Click OK to confirm including uppercase characters.');
+
+  }
+
+  // Function for getting a random element from an array
+  function getRandom(arr) {
+
+  }
 
 }
 
-// Function for getting a random element from an array
-function getRandom(arr) {
+  // Function to generate password with user input
+  function generatePassword() {
+    //alert("Called this function");
+    //return "this is a secrect password"
+  }
 
-}
+  // Get references to the #generate element
+  var generateBtn = document.querySelector('#generate');
 
+
+  // Not to be touched as per instructions in class
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector('#password');
+
+    passwordText.value = password;
+  }
+
+  // Add event listener to generate button
+  generateBtn.addEventListener('click', writePassword);
+
+
+//TO cancel at the end
 // Function to generate password with user input
-function generatePassword() {
-
-}
-
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);
+// function generatePassword() {
+//alert("Called this function");
+//return "this is a secrect password"
+//}
