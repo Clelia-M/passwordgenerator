@@ -13,12 +13,12 @@ var upperCasedCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K
 // Function to prompt user for password options
 function getPasswordOptions() {
   // Declare variables to store user input and user confirmations
-  var lenght = parseInt(
+  var length = parseInt(
     prompt('How many characters would you like your password to contain?')
   );
-  while (isNaN(lenght) || lenght < 10 || lenght > 64) {
-    alert('Password lenght needs to be a number between 10 and 64');
-    lenght = parseInt(
+  while (isNaN(length) || length < 10 || length > 64) {
+    alert('Password length needs to be a number between 10 and 64');
+    length = parseInt(
       prompt('How many characters would you like your password to contain?')
     );
   }
@@ -48,7 +48,7 @@ function getPasswordOptions() {
 
   // Store user input and confirmation
   return {
-    lenght: lenght,
+    length: length,
     hasSpecialCharacters: hasSpecialCharacters,
     hasNumericCharacters: hasNumericCharacters,
     hasLowerCasedCharacters: hasLowerCasedCharacters,
@@ -58,7 +58,7 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-  var randIndex = Math.floor(Math.random() * arr.lenght);
+  var randIndex = Math.floor(Math.random() * arr.length);
   var randElement = arr[randIndex];
   return randElement;
 }
@@ -87,7 +87,7 @@ function generatePassword() {
   }
 
   // For loop that iterates through the options object to create the psw
-  for (var i = 0; i < options.lenght; i++) {
+  for (var i = 0; i < options.length; i++) {
     var possibleCharacters = result;
     var randomCharacter = getRandom(possibleCharacters);
     //result.push(randomCharacter);
@@ -96,7 +96,7 @@ function generatePassword() {
 
   // Transform the result into a string without commas
   result = result.join('');
-  return result.slice(0, options.lenght);
+  return result.slice(0, options.length);
 }
 
 // Get references to the #generate element
