@@ -19,4 +19,4 @@ Application that an employee can use to generate a random password based on crit
 [Password Generator](https://clelia-m.github.io/passwordgenerator/)
 
 ## Final Results
-![Password Generator result](https://github.com/Clelia-M/Console-Finances/blob/7cbde3d1c2648457439020d3ebb77ea17f74b9e9/Console-Finances%20results.png)
+![Password Generator result](https://github.com/Clelia-M/passwordgenerator/blob/22d615de67c3d80705089b17070385c0aca26370/Password%20Generator_final%20results.png)
