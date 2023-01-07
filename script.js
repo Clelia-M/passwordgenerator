@@ -142,7 +142,7 @@ function generatePassword() {
   // Declare variables to store user input and user confirmations
   var result = [];
 
-  // conditional statements that add the characters based on the user's input
+  // Conditional statements that add characters based on user's input
   if (options.hasSpecialCharacters) {
     result = result.concat(specialCharacters);
   }
