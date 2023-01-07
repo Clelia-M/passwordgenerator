@@ -164,10 +164,13 @@ function generatePassword() {
   for(var i = 0; i< options.lenght; i++) {
     var possibleCharacters = result;
     var randomCharacter = getRandom(possibleCharacters);
-    result.push(randomCharacter);
+    result[i] = randomCharacter;
   }
 
-  }
+  // transform the result into a string - no commans
+  result = result.join('');
+  return result.slice(0, options.lenght);
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
