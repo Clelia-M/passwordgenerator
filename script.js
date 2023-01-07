@@ -90,7 +90,8 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  //Declare variables to store user input and user confirmations
+
+  // Declare variables to store user input and user confirmations
   var lenght = parseInt(prompt('How many characters would you like your password to contain?')
   );
   while (isNaN(lenght) || lenght < 10 || lenght > 64) {
@@ -126,12 +127,13 @@ function getPasswordOptions() {
     hasLowerCasedCharacters: hasLowerCasedCharacters,
     hasUpperCasedCharacters: hasUpperCasedCharacters
   };
-
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
- 
+  var randIndex = Math.floor(Math.random() * arr.lenght);
+  var randElement = arr[randIndex];
+  return randElement; 
 }
 
 // Function to generate password with user input
