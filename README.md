@@ -16,7 +16,7 @@ Application that an employee can use to generate a random password based on crit
 3. **Function to generate password with user input:** the function is written to generate a password based on the user's options stored in the first function. It begins by declaring an empty array for the result. Next, it includes several conditional statements that add the carachters to the result using concat method. Next, a for loop go through the options obejct to create a password. And, it calls the getRandom function to select a random character from the result array. Once the for loop is completed the result array is transformed in a string using the join method and put in the correct length using the slice method.
 
 ## Link to deployed Application
-[Password Generator](https://clelia-m.github.io/Console-Finances/)
+[Password Generator](https://clelia-m.github.io/passwordgenerator/)
 
 ## Final Results
 ![Password Generator result](https://github.com/Clelia-M/Console-Finances/blob/7cbde3d1c2648457439020d3ebb77ea17f74b9e9/Console-Finances%20results.png)
