@@ -117,6 +117,16 @@ function getPasswordOptions() {
 
     alert('Must select at least one character type');
   };
+
+  // Store user input and confirmation
+  return {
+    lenght: lenght,
+    hasSpecialCharacters: hasSpecialCharacters,
+    hasNumericCharacters: hasNumericCharacters,
+    hasLowerCasedCharacters: hasLowerCasedCharacters,
+    hasUpperCasedCharacters: hasUpperCasedCharacters
+  };
+
 }
 
 // Function for getting a random element from an array
