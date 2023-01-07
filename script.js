@@ -160,6 +160,12 @@ function generatePassword() {
     result = result.concat(upperCasedCharacters);
   }
 
+  // For loop that iterates through the options object to create the psw
+  for(var i = 0; i< options.lenght; i++) {
+    var possibleCharacters = result;
+    var randomCharacter = getRandom(possibleCharacters);
+    result.push(randomCharacter);
+  }
 
   }
 
