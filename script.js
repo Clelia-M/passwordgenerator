@@ -166,7 +166,7 @@ function generatePassword() {
     result[i] = randomCharacter;
   }
 
-  // transform the result into a string - no commans
+  // Transform the result into a string without commas
   result = result.join('');
   return result.slice(0, options.lenght);
 }
@@ -178,10 +178,12 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  console.log(password);
   var passwordText = document.querySelector('#password');
-
+  console.log(passwordText);
   passwordText.value = password;
 }
 
 // Add event listener to generate button
+var generateBtn = document.querySelector('#generate');
 generateBtn.addEventListener('click', writePassword);
