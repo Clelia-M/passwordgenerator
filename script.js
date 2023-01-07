@@ -90,12 +90,11 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
   // Declare variables to store user input and user confirmations
   var lenght = parseInt(prompt('How many characters would you like your password to contain?')
   );
   while (isNaN(lenght) || lenght < 10 || lenght > 64) {
-    alert('Password lenght must be a number between 10 and 64');
+    alert('Password lenght need to be a number between 10 and 64');
     lenght = parseInt(prompt('How many characters would you like your password to contain?')
     );
   }
@@ -104,7 +103,7 @@ function getPasswordOptions() {
 
   var hasNumericCharacters = confirm('Click OK to confirm including numeric characters.');
 
-  var hasLowerCasedCharacters = confirm('Click OK to confirm including special characters.');
+  var hasLowerCasedCharacters = confirm('Click OK to confirm including lowercase characters.');
 
   var hasUpperCasedCharacters = confirm('Click OK to confirm including uppercase characters.');
 
@@ -133,7 +132,7 @@ function getPasswordOptions() {
 function getRandom(arr) {
   var randIndex = Math.floor(Math.random() * arr.lenght);
   var randElement = arr[randIndex];
-  return randElement; 
+  return randElement;
 }
 
 // Function to generate password with user input
@@ -161,7 +160,7 @@ function generatePassword() {
   }
 
   // For loop that iterates through the options object to create the psw
-  for(var i = 0; i< options.lenght; i++) {
+  for (var i = 0; i < options.lenght; i++) {
     var possibleCharacters = result;
     var randomCharacter = getRandom(possibleCharacters);
     result[i] = randomCharacter;
